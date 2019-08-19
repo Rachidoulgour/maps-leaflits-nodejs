@@ -16,6 +16,9 @@ app.set('views', path.join(__dirname, 'views'));
 // routes
 app.use(require('./routes/'));
 
+//sockets
+require('./sockets')(io);
+
 // static files
 app.use(express.static(path.join(__dirname, 'public')));
 
