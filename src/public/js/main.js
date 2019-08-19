@@ -11,7 +11,12 @@ map.on('locationfound', event=>{
     const coords = [event.latlng.lat, event.latlng.lng];
     const marker=L.marker(coords).bindPopup('Estás aquí');
     marker.addTo(map);
+    socket.emit('userCoordinates', event.latlng);
+})
+socket.on('newUserCoordinates', (coords)=>{
+    const marker=L.marker([coords.lat, coords.lng]).bindPopup('Estás aquí');
+marker.addTo(map);
 })
 
-const marker=L.marker([39.4840108, -0.7532808999999999]).bindPopup('Estás aquí');
-marker.addTo(map);
+// const marker=L.marker([39.4840108, -0.7532808999999999]).bindPopup('Estás aquí');
+// marker.addTo(map);
