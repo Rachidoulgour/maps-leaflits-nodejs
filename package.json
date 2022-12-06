@@ -19,7 +19,7 @@
   "homepage": "https://github.com/Rachidoulgour/maps-leaflits-nodejs#readme",
   "dependencies": {
     "ejs-mate": "^3.0.0",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "socket.io": "^2.2.0"
   },
   "devDependencies": {
